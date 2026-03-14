@@ -4,7 +4,6 @@ class Solution:
         arr = []
         curr = ''
         for c in s:
-            print(c, curr, arr)
             if c != ' ':
                 curr += c
             elif curr:
