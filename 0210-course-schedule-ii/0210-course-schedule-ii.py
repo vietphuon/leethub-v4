@@ -7,7 +7,7 @@ class Solution:
         # 0 = unvisited, 1 = visiting (in current path), 2 = visited (done)
         state = [0] * numCourses
         arr = []
-        print(adj) # [[2], [0], [1]]
+        # print(adj) # [[2], [0], [1]]
         # [0, 0, 0] -> [1, 0, 0] -> [1, 0, 1] -> [1, 1, 1] -> (!) violate
         
         def dfs(course) -> bool:
