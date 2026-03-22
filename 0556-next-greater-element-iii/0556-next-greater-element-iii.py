@@ -9,6 +9,8 @@ class Solution:
         r = len(digits) # n = 123 -> digits = [3, 2, 1]
         # print(digits)
         for i in range(r-1):
+            # Step 1: find the smallest digit in digits[0..i] that is still > digits[i+1]
+            # (not just any digits[j] < digits[i])
             if digits[i] > digits[i+1]:
                 print("Detect:", digits, "i:", i)
                 # perform swap -> naive swap won't work
@@ -28,6 +30,7 @@ class Solution:
 
                 # Step 2: now sort digits[0..i] to be in ??? order
                 digits[:i+1] = sorted(digits[:i+1], reverse=True)
+                print("Sort to i:", digits)
                 break
 
         # digits.sort(key=lambda x: -x)
