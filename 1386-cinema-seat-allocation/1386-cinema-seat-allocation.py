@@ -15,12 +15,12 @@ class Solution:
                 hs[r-1] = [1]*10
             hs[r-1][c-1] = 0 
         
-        print(hs)
+        # print(hs)
         conflicts = len(hs) # number of rows need handle
         res = (n - conflicts)*2
 
         for seat in hs:
-            print("Seat:", seat)
+            # print("Seat:", seat)
             res += checkRow(hs[seat])
         
         return res
